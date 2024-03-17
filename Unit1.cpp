@@ -19,9 +19,7 @@ __fastcall TForm1::TForm1(TComponent* Owner)
 void __fastcall TForm1::Button1Click(TObject *Sender)
 {
 
-    myLettre.Random();
 	String chemin = myLettre.Sound();
-    Label3->Caption = chemin;
 
 	String currentDir = GetCurrentDir();
 	String audioFilePath = currentDir + L"\\data\\sound\\" + chemin;
@@ -59,7 +57,6 @@ void __fastcall TForm1::ButtonEnvoyerClick(TObject *Sender)
 
 		ValiderImg->Visible = true;
 		Image1->Visible = false;
-
         Timer1->Enabled = true;
 
 
@@ -67,16 +64,22 @@ void __fastcall TForm1::ButtonEnvoyerClick(TObject *Sender)
 		score++;
 		scorelabel->Caption = score;
 		myLettre.Random();
+
+
 	}else if (verif == false) {
 
+
+		Label3->Visible = true;
+		myLettre.Erreur(Label3);
 		CroixImg->Visible = true;
 		Image1->Visible = false;
-
 		Timer2->Enabled = true;
-		score--;
+
 		scorelabel->Caption = score;
 		myLettre.Random();
 	}
+	totalScore++;
+    Label4->Caption = "/" + String(totalScore);
 	Edit1->Text = "";
 }
 
@@ -96,7 +99,10 @@ void __fastcall TForm1::Timer2Timer(TObject *Sender)
 {
 	Timer2->Enabled = false;
 	CroixImg->Visible = false;
+	Label3->Visible = false;
 	Image1->Visible = true;
 }
 //---------------------------------------------------------------------------
+
+
 

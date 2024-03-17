@@ -19,5 +19,6 @@ class Lettre{
 		String Sound();
 		bool Verifier(String ValeurEntree);
 		void Logs(String lettre);
+		void Erreur(TLabel *Ecrito);
 
 };

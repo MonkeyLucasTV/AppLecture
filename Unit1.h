@@ -35,6 +35,7 @@ __published:	// Composants gérés par l'EDI
 	TTimer *Timer1;
 	TTimer *Timer2;
 	TLabel *Label3;
+	TLabel *Label4;
 	void __fastcall Button1Click(TObject *Sender);
 	void __fastcall Button2Click(TObject *Sender);
 	void __fastcall ButtonEnvoyerClick(TObject *Sender);
@@ -42,6 +43,7 @@ __published:	// Composants gérés par l'EDI
 	void __fastcall Timer2Timer(TObject *Sender);
 private:	// Déclarations utilisateur
 	Lettre myLettre;
+	int totalScore;
 public:		// Déclarations utilisateur
 	__fastcall TForm1(TComponent* Owner);
 };

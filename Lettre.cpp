@@ -2,6 +2,7 @@
 #include "Lettre.h"
 #include <string>
 #include <iostream>
+#include <Vcl.StdCtrls.hpp>
 #include <map>
 #include <stdlib.h>
 #include <windows.hpp>
@@ -49,9 +50,14 @@ void Lettre::Logs(String lettre){
 
 
 String Lettre::Sound(){
-	Random();
+
 	return(Chemin);
 };
 
 
+void Lettre::Erreur(TLabel *Ecrito){
 
+
+	Ecrito->Caption = Letre;
+
+};
