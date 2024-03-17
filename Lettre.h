@@ -12,7 +12,6 @@ class Lettre{
 		String Letters[2][26];
 
 
-
 	public:
 		Lettre();
 		void Random();

@@ -41,6 +41,7 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 
 void __fastcall TForm1::Button2Click(TObject *Sender)
 {
+	Image1->Visible = true;
 	Button2->Visible = false;
 	Image1->Visible = true;
 	myLettre.Random();
@@ -68,7 +69,6 @@ void __fastcall TForm1::ButtonEnvoyerClick(TObject *Sender)
 
 	}else if (verif == false) {
 
-
 		Label3->Visible = true;
 		myLettre.Erreur(Label3);
 		CroixImg->Visible = true;
@@ -78,6 +78,7 @@ void __fastcall TForm1::ButtonEnvoyerClick(TObject *Sender)
 		scorelabel->Caption = score;
 		myLettre.Random();
 	}
+
 	totalScore++;
     Label4->Caption = "/" + String(totalScore);
 	Edit1->Text = "";

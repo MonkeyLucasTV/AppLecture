@@ -44,20 +44,14 @@ bool Lettre::Verifier(String ValeurEntree){
 
 
 void Lettre::Logs(String lettre){
-
-
 };
 
 
 String Lettre::Sound(){
-
 	return(Chemin);
 };
 
 
 void Lettre::Erreur(TLabel *Ecrito){
-
-
 	Ecrito->Caption = Letre;
-
 };

@@ -503,7 +503,7 @@ object Form1: TForm1
   end
   object Label1: TLabel
     Left = 256
-    Top = 392
+    Top = 440
     Width = 189
     Height = 25
     Caption = 'Quelle est la lettre ?'
@@ -516,17 +516,29 @@ object Form1: TForm1
   end
   object scorelabel: TLabel
     Left = 80
-    Top = 402
-    Width = 6
-    Height = 13
+    Top = 397
+    Width = 9
+    Height = 19
     Caption = '0'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
   end
   object Label2: TLabel
-    Left = 37
-    Top = 402
-    Width = 34
-    Height = 13
+    Left = 24
+    Top = 397
+    Width = 50
+    Height = 19
     Caption = 'Score :'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
   end
   object CroixImg: TImage
     Left = 216
@@ -3438,6 +3450,33 @@ object Form1: TForm1
     Proportional = True
     Visible = False
   end
+  object Label3: TLabel
+    Left = 331
+    Top = 349
+    Width = 37
+    Height = 77
+    Caption = 'L'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -64
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Visible = False
+  end
+  object Label4: TLabel
+    Left = 103
+    Top = 397
+    Width = 6
+    Height = 19
+    Caption = '/'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
   object Button1: TButton
     Left = 327
     Top = 59
@@ -3451,7 +3490,7 @@ object Form1: TForm1
   end
   object Edit1: TEdit
     Left = 304
-    Top = 448
+    Top = 480
     Width = 97
     Height = 66
     Font.Charset = DEFAULT_CHARSET
@@ -3464,7 +3503,7 @@ object Form1: TForm1
   end
   object ButtonEnvoyer: TButton
     Left = 312
-    Top = 520
+    Top = 560
     Width = 75
     Height = 25
     Caption = 'Envoyer'
@@ -3472,10 +3511,10 @@ object Form1: TForm1
     OnClick = ButtonEnvoyerClick
   end
   object Button2: TButton
-    Left = 120
+    Left = 119
     Top = 51
-    Width = 435
-    Height = 276
+    Width = 473
+    Height = 311
     Caption = 'START'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -3500,13 +3539,14 @@ object Form1: TForm1
   object Timer1: TTimer
     Interval = 650
     OnTimer = Timer1Timer
-    Left = 624
-    Top = 560
+    Left = 632
+    Top = 568
   end
   object Timer2: TTimer
-    Interval = 650
+    Enabled = False
+    Interval = 1500
     OnTimer = Timer2Timer
-    Left = 584
-    Top = 560
+    Left = 632
+    Top = 520
   end
 end

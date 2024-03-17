@@ -1,6 +1,6 @@
 
  Start Length Name Class
- 0001:00401000 0002E9450H _TEXT                  CODE
+ 0001:00401000 0002E9460H _TEXT                  CODE
  0002:006EB000 0001E5E00H _RODATA                RODATA
  0003:008D1000 00001BA7CH _DATA                  DATA
  0004:008ECA80 000051310H _BSS                   BSS

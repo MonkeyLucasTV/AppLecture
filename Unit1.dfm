@@ -3467,9 +3467,9 @@ object Form1: TForm1
   object Label4: TLabel
     Left = 103
     Top = 397
-    Width = 6
+    Width = 15
     Height = 19
-    Caption = '/'
+    Caption = '/0'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -3511,7 +3511,7 @@ object Form1: TForm1
     OnClick = ButtonEnvoyerClick
   end
   object Button2: TButton
-    Left = 119
+    Left = 103
     Top = 51
     Width = 473
     Height = 311
@@ -3547,6 +3547,6 @@ object Form1: TForm1
     Interval = 1500
     OnTimer = Timer2Timer
     Left = 632
-    Top = 520
+    Top = 568
   end
 end
