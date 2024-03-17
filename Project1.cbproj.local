@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/11/11 15:06:39.000.779,=D:\palad\Documents\Embarcadero\Studio\Projets\Project1PCH1.h</Transaction>
+    <Transaction>2023/11/11 15:06:39.000.882,=D:\palad\Documents\Embarcadero\Studio\Projets\Unit1.cpp</Transaction>
+    <Transaction>2023/11/11 15:07:34.000.658,D:\palad\Documents\Embarcadero\Studio\Projets\Unit1.dfm=C:\Users\palad\Desktop\projet app lecture\Projet lecture\Projet lecture\Unit1.dfm</Transaction>
+    <Transaction>2023/11/11 15:07:34.000.658,D:\palad\Documents\Embarcadero\Studio\Projets\Unit1.cpp=C:\Users\palad\Desktop\projet app lecture\Projet lecture\Projet lecture\Unit1.cpp</Transaction>
+    <Transaction>2023/11/11 15:07:34.000.658,D:\palad\Documents\Embarcadero\Studio\Projets\Unit1.h=C:\Users\palad\Desktop\projet app lecture\Projet lecture\Projet lecture\Unit1.h</Transaction>
+    <Transaction>2023/11/11 15:07:42.000.407,D:\palad\Documents\Embarcadero\Studio\Projets\Project1PCH1.h=C:\Users\palad\Desktop\projet app lecture\Projet lecture\Projet lecture\Project1PCH1.h</Transaction>
+    <Transaction>2023/11/11 15:07:43.000.776,D:\palad\Documents\Embarcadero\Studio\Projets\Project1.cbproj=C:\Users\palad\Desktop\projet app lecture\Projet lecture\Projet lecture\Project1.cbproj</Transaction>
+    <Transaction>2023/11/11 15:18:01.000.995,=C:\Users\palad\Desktop\projet app lecture\Projet lecture\Projet lecture\File1.cpp</Transaction>
+    <Transaction>2023/11/11 15:18:09.000.442,C:\Users\palad\Desktop\projet app lecture\Projet lecture\Projet lecture\File1.cpp=C:\Users\palad\Desktop\projet app lecture\Projet lecture\Projet lecture\Lettre.cpp</Transaction>
+    <Transaction>2023/11/11 15:18:22.000.454,=C:\Users\palad\Desktop\projet app lecture\Projet lecture\Projet lecture\File1.h</Transaction>
+    <Transaction>2023/11/11 15:18:27.000.047,C:\Users\palad\Desktop\projet app lecture\Projet lecture\Projet lecture\File1.h=C:\Users\palad\Desktop\projet app lecture\Projet lecture\Projet lecture\Lettre.h</Transaction>
+    <Transaction>2023/11/11 18:20:56.000.787,=C:\Users\palad\Desktop\projet app lecture\Projet lecture\Projet lecture\data\sound\A.wav</Transaction>
+    <Transaction>2023/11/11 18:27:54.000.576,=C:\Users\palad\Desktop\projet app lecture\Projet lecture\Projet lecture\A.mp3</Transaction>
+    <Transaction>2023/11/11 18:27:54.000.598,=C:\Users\palad\Desktop\projet app lecture\Projet lecture\Projet lecture\A.wav</Transaction>
+    <Transaction>2023/11/11 21:47:40.000.094,C:\Users\palad\Desktop\projetlecture\Projetlecture\Projetlecture\Project1.cbproj=C:\Users\palad\Desktop\projetlecture\Projetlecture\Projetlecture\Project1.cbproj</Transaction>
+  </Transactions>
+</BorlandProject>
