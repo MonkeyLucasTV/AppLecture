@@ -43,7 +43,7 @@ void Randomized::Erreur(int Index){
 				if(val == i){
 					continue;
 				}
-				else if(NbValueTab != 0) {TableauStat[i] -= 0.04/(float)NbValueTab;}
+			if(NbValueTab != 0) {TableauStat[i] -= 0.04/(float)NbValueTab;}
 			}
 
 
@@ -55,10 +55,9 @@ void Randomized::Erreur(int Index){
 
 void Randomized::Reussite(int Index){
 	if(TableauStat[Index] < 0.3){
-		float Valeur = TableauStat[Index] + 0.2;
 		for(int i = 0; i<26 ; i++){
-			if(i == Index) TableauStat[Index] -= Valeur;
-			else TableauStat[i] += 0.2/25.0;
+			if(i == Index) TableauStat[Index] -= 0.25;
+			else TableauStat[i] += 0.01;
 		}
 	}
 }

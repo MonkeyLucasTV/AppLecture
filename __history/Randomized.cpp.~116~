@@ -16,13 +16,7 @@ Randomized::Randomized(){
 }
 
 void Randomized::Erreur(int Index){
-//	for (int i = 0; i < 26; i++) {
-//		if (i == Index) TableauStat[i] += 5.2;
-//		else TableauStat[i] -= 0.2;
-//	}
-
 	bool TousSupp = true;
-
 	for (int i = 0; i < 26; i++) {
 		if (TableauStat[i] < 0.05){
 			TousSupp = false;
@@ -49,13 +43,13 @@ void Randomized::Erreur(int Index){
 				if(val == i){
 					continue;
 				}
-				else if(NbValueTab != 0) {TableauStat[i] -= 0.04/(float)NbValueTab;}
+			if(NbValueTab != 0) {TableauStat[i] -= 0.04/(float)NbValueTab;}
 			}
 
 
 		}
 	}
-	TableauStat[Index] += 1;
+	TableauStat[Index] += 1.0;
 
 }
 
@@ -64,7 +58,7 @@ void Randomized::Reussite(int Index){
 		float Valeur = TableauStat[Index] + 0.2;
 		for(int i = 0; i<26 ; i++){
 			if(i == Index) TableauStat[Index] -= Valeur;
-			else TableauStat[i] += 0.2/25.0;
+			else TableauStat[i] += 0.008;
 		}
 	}
 }
