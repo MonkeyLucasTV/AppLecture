@@ -11,7 +11,7 @@ class Randomized{
 
 
 	private:
-		float TableauStat[25];
+		float TableauStat[26];
 		float Tot;
 		float Tire;
 
@@ -21,6 +21,8 @@ class Randomized{
 		void Reussite(int Index);
 		void LogProba();
 		int Tirage(float PlageProbaTire);
+
+		inline float Tableau(int i) {return TableauStat[i];};
 
 
 

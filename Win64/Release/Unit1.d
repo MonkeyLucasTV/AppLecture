@@ -67,6 +67,7 @@
   d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\dinkumware64\cerrno \
   C:\Users\palad\Desktop\projetlecture\Projetlecture\Projetlecture/Unit1.h \
   C:\Users\palad\Desktop\projetlecture\Projetlecture\Projetlecture/Lettre.h \
+  C:\Users\palad\Desktop\projetlecture\Projetlecture\Projetlecture/Randomized.h \
   d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\windows\vcl\Vcl.MPlayer.hpp \
   d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\windows\rtl\Winapi.MMSystem.hpp \
   d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\windows\sdk\mmsystem.h \

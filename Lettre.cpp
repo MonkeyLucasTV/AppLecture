@@ -18,12 +18,12 @@ Lettre::Lettre(){
 		Letters[1][i] = Letters[0][i] + ".mp3";      // Noms de fichiers MP3
 	}
 
+    srand(time(NULL));
 }
 
 
 void Lettre::Random(){
 
-	srand(time(0));
 	float randnum = (((float)rand())/((float)RAND_MAX)) *26.0;
 	IndexLettre = Alea.Tirage(randnum);
 	String LettreAlea =  Letters[0][IndexLettre];

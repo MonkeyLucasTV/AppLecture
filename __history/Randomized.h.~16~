@@ -1,0 +1,29 @@
+//---------------------------------------------------------------------------
+
+#ifndef RandomizedH
+#define RandomizedH
+//---------------------------------------------------------------------------
+#endif
+
+
+
+class Randomized{
+
+
+	private:
+		float TableauStat[25];
+		float Tot;
+		float Tire;
+
+	public:
+		Randomized();
+		void Erreur(int Index);
+		void Reussite(int Index);
+		void LogProba();
+		int Tirage(float PlageProbaTire);
+
+		inline float Tableau() {return TableauStat[i];};
+
+
+
+};

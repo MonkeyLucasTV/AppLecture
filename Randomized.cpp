@@ -6,27 +6,59 @@
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #include <fstream>
+#include <vector>
 
 
 Randomized::Randomized(){
 	for (int i = 0; i < 26; ++i) {
-		TableauStat[i] = 100/26;
+		TableauStat[i] = 1.0;
 	}
 }
 
 void Randomized::Erreur(int Index){
+	bool TousSupp = true;
 	for (int i = 0; i < 26; i++) {
-		if (i == Index) TableauStat[i] += 5.2;
-		else TableauStat[i] -= 0.2;
+		if (TableauStat[i] < 0.05){
+			TousSupp = false;
+			break;
+		}
 	}
+	if(TousSupp){
+		for(int i =0; i < 26 ; i++){
+			if (i != Index) TableauStat[i] -= 0.04;
+		}
+	}
+	else if(!TousSupp){
+		std::vector<int> indexTab;
+		int NbValueTab = 0;
+		for(int i =0; i < 26 ; i++){
+			if (TableauStat[i] < 0.05){
+				indexTab.push_back(i);
+				NbValueTab++;
+            }
+		}
+		for(int i =0; i < 26; i++){
+
+			for (int val : indexTab){
+				if(val == i){
+					continue;
+				}
+				else if(NbValueTab != 0) {TableauStat[i] -= 0.04/(float)NbValueTab;}
+			}
+
+
+		}
+	}
+	TableauStat[Index] += 1.0;
+
 }
 
 void Randomized::Reussite(int Index){
-	if(TableauStat[Index] < 1){
-		float Valeur = ((TableauStat[Index]-1)/2)/25;
+	if(TableauStat[Index] < 0.3){
+		float Valeur = TableauStat[Index] + 0.2;
 		for(int i = 0; i<26 ; i++){
-			if(i == Index) TableauStat[Index] = (TableauStat[Index]-1)/2;
-			else TableauStat[Index] += Valeur;
+			if(i == Index) TableauStat[Index] -= Valeur;
+			else TableauStat[i] += 0.2/25.0;
 		}
 	}
 }
@@ -34,10 +66,8 @@ void Randomized::Reussite(int Index){
 int Randomized::Tirage(float PlageProbaTire){
 
 	float value = 0.0;
-	Tire = PlageProbaTire;
 	for (int i = 0; i < 26; i++) {
-		if(value > TableauStat[i]){
-
+		if(value > PlageProbaTire){
 			return i;
 		}
 		else value += TableauStat[i];
@@ -45,15 +75,18 @@ int Randomized::Tirage(float PlageProbaTire){
 }
 
 void Randomized::LogProba(){
-	std::ofstream Log("Log.txt", std::ios_base::app);
+	std::ofstream Log("data/log/Log.txt", std::ios_base::app);
 	Log << "\n";
 	Tot = 0;
+
+
+
+
 	for (int i = 0; i < 26; i++) {
 		Tot += TableauStat[i];
 		Log << TableauStat[i];
 		Log << " ";
+
 	}
-	 Log << " ";
-	 Log << Tot;
-	 Log << " " << Tire;
+    Log << "Voici Tot : " << Tot;
 }

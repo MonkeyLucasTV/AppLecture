@@ -151,6 +151,12 @@
             <BuildOrder>1</BuildOrder>
             <PCH>true</PCH>
         </PCHCompile>
+        <CppCompile Include="Randomized.cpp">
+            <BuildOrder>9</BuildOrder>
+        </CppCompile>
+        <None Include="Randomized.h">
+            <BuildOrder>8</BuildOrder>
+        </None>
         <CppCompile Include="Unit1.cpp">
             <Form>Form1</Form>
             <FormType>dfm</FormType>
@@ -231,6 +237,12 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win64\rtl200.de" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win64">
+                        <RemoteName>rtl200.de</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="$(BDS)\Redist\Win64\vclimg200.fr" Configuration="Debug" Class="DependencyPackageResource">
                     <Platform Name="Win64">
                         <RemoteName>vclimg200.fr</RemoteName>
@@ -238,12 +250,6 @@
                     </Platform>
                 </DeployFile>
                 <DeployFile LocalName=".\Toutes les plates-formes\Base\Project1.exe" Configuration="Base" Class="ProjectOutput"/>
-                <DeployFile LocalName="$(BDS)\Redist\Win64\rtl200.de" Configuration="Debug" Class="DependencyPackageResource">
-                    <Platform Name="Win64">
-                        <RemoteName>rtl200.de</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
                 <DeployFile LocalName="$(BDS)\Redist\Win64\vcl200.fr" Configuration="Debug" Class="DependencyPackageResource">
                     <Platform Name="Win64">
                         <RemoteName>vcl200.fr</RemoteName>
@@ -283,8 +289,9 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\vclimg200.bpl" Configuration="Debug" Class="DependencyPackage">
+                <DeployFile LocalName=".\Win32\Debug\Project1.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
+                        <RemoteName>Project1.exe</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -314,9 +321,8 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName=".\Win32\Debug\Project1.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vclimg200.bpl" Configuration="Debug" Class="DependencyPackage">
                     <Platform Name="Win32">
-                        <RemoteName>Project1.exe</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
