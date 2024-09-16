@@ -1,0 +1,56 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "Randomized.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#include <fstream>
+
+
+Randomized::Randomized(){
+	for (int i = 0; i < 26; ++i) {
+		TableauStat[i] = 100/26;
+	}
+}
+
+void Randomized::Erreur(int Index){
+	for (int i = 0; i < 25; i++) {
+		if (i == Index) TableauStat[i] += 5.2;
+		else TableauStat[i] -= 0.2;
+	}
+}
+
+void Randomized::Reussite(int Index){
+	if(TableauStat[Index] < 1){
+		float Valeur = ((TableauStat[Index]-1)/2)/25;
+		for(int i = 0; i<25 ; i++){
+			if(i == Index) TableauStat[Index] = (TableauStat[Index]-1)/2;
+			else TableauStat[Index] += Valeur;
+		}
+	}
+}
+
+int Randomized::Tirage(float PlageProbaTire){
+
+	float value = 0.0;
+	for (int i = 0; i < 25; i++) {
+		if(value > TableauStat[i]){
+			return i;
+		}
+		else value += TableauStat[i];
+	}
+}
+
+void Randomized::LogProba(){
+	std::ofstream Log("Log.txt", std::ios_base::app);
+	Log << "\n";
+	Tot = 0.0;
+	for (int i = 0; i < 25; i++) {
+		Tot += TableauStat[i];
+		Log << TableauStat[i];
+		Log << " ";
+	}
+	 Log << " ";
+	 Log << Tot;
+}

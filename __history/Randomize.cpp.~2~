@@ -1,0 +1,52 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "Randomize.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#include <fstream>
+
+
+Randomize::Randomize(){
+	for (int i = 0; i < 26; ++i) {
+		TableauStat[i] = 100/26;
+	}
+}
+
+void Randomize::Erreur(int Index){
+	for (int i = 0; i < 25; i++) {
+		if (i == Index) TableauStat[i] += 5.2;
+		else TableauStat[i] -= 0.2;
+	}
+}
+
+void Randomize::Reussite(int Index){
+	if(TableauStat[Index] < 1){
+		float Valeur = ((TableauStat[Index]-1)/2)/25;
+		for(int i = 0; i<25 ; i++){
+			if(i == Index) TableauStat[Index] = (TableauStat[Index]-1)/2;
+			else TableauStat[Index] += Valeur;
+		}
+	}
+}
+
+int Randomize::Tirage(float PlageProbaTire){
+
+	float value = 0.0;
+	for (int i = 0; i < 25; i++) {
+		if(value > TableauStat[i]){
+			return i;
+		}
+		else value += TableauStat[i]
+	}
+}
+
+void Randomize::LogProba(){
+	ofstream Log("Log.txt");
+	Log << "\n";
+	for (int i = 0; i < 25; i++) {
+		Log << TableauStat[i];
+		Log << " ";
+	}
+}

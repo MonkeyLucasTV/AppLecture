@@ -1,6 +1,10 @@
 
 #include <string>
 
+
+#include "Randomized.h"
+
+
 using namespace std;
 
 class Lettre{
@@ -10,6 +14,9 @@ class Lettre{
 		String Letre;
 		String Chemin;
 		String Letters[2][26];
+        int IndexLettre;
+		Randomized Alea;
+
 
 
 	public:

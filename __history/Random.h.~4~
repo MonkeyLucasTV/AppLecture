@@ -1,0 +1,27 @@
+//---------------------------------------------------------------------------
+
+#ifndef RandomH
+#define RandomH
+//---------------------------------------------------------------------------
+#endif
+
+
+
+class Lettre{
+
+
+	private:
+		float TableauStat[25];
+
+
+
+	public:
+		void Erreur(int Index);
+		void Reussite(int Index);
+		int Tirage(float PlageProbaTire);
+		void LogProba();
+
+
+
+
+};

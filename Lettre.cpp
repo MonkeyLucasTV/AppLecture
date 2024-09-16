@@ -17,15 +17,21 @@ Lettre::Lettre(){
 		Letters[0][i] = (String(char('A' + i )));  // Lettres de l'alphabet
 		Letters[1][i] = Letters[0][i] + ".mp3";      // Noms de fichiers MP3
 	}
+
 }
 
 
 void Lettre::Random(){
 
 	srand(time(0));
-	int randnum = rand() % 25;
-	String LettreAlea =  Letters[0][randnum];
-	String CheminAlea = Letters[1][randnum];
+	float randnum = (((float)rand())/((float)RAND_MAX)) *26.0;
+	IndexLettre = Alea.Tirage(randnum);
+	String LettreAlea =  Letters[0][IndexLettre];
+	String CheminAlea = Letters[1][IndexLettre];
+
+
+
+
 	Chemin = CheminAlea;
 	Letre = LettreAlea;
 
@@ -34,9 +40,14 @@ void Lettre::Random(){
 
 bool Lettre::Verifier(String ValeurEntree){
 	if (Letre == ValeurEntree){
+		Alea.Reussite(IndexLettre);
+		Alea.LogProba();
+
 		return(true);
 	}
 	else if (Letre != ValeurEntree){
+		Alea.Erreur(IndexLettre);
+		Alea.LogProba();
 		return(false);
 	}
 
