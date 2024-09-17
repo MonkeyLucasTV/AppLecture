@@ -24,7 +24,10 @@ Lettre::Lettre(){
 
 void Lettre::Random(){
 
-	float randnum = (((float)rand())/((float)RAND_MAX)) *26.0;
+
+	float ProbaRand= Alea.ProbaRand();
+
+	float randnum = (((float)rand())/((float)RAND_MAX)) * ProbaRand;
 	IndexLettre = Alea.Tirage(randnum);
 	String LettreAlea =  Letters[0][IndexLettre];
 	String CheminAlea = Letters[1][IndexLettre];
@@ -42,7 +45,6 @@ bool Lettre::Verifier(String ValeurEntree){
 	if (Letre == ValeurEntree){
 		Alea.Reussite(IndexLettre);
 		Alea.LogProba();
-
 		return(true);
 	}
 	else if (Letre != ValeurEntree){

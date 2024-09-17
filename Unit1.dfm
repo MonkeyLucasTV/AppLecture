@@ -3,7 +3,7 @@ object Form1: TForm1
   Top = 0
   Caption = 'Form1'
   ClientHeight = 615
-  ClientWidth = 679
+  ClientWidth = 1002
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -3535,6 +3535,22 @@ object Form1: TForm1
       'lecture\A.mp3'
     Visible = False
     TabOrder = 4
+  end
+  object RichEdit1: TRichEdit
+    Left = 664
+    Top = 51
+    Width = 297
+    Height = 414
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    Lines.Strings = (
+      'RichEdit1')
+    ParentFont = False
+    TabOrder = 5
+    Zoom = 100
   end
   object Timer1: TTimer
     Interval = 650

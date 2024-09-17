@@ -10,56 +10,30 @@
 
 
 Randomized::Randomized(){
-	for (int i = 0; i < 26; ++i) {
+	for (int i = 0; i < 26; i++) {
 		TableauStat[i] = 1.0;
 	}
 }
 
 void Randomized::Erreur(int Index){
-	bool TousSupp = true;
-	for (int i = 0; i < 26; i++) {
-		if (TableauStat[i] < 0.05){
-			TousSupp = false;
-			break;
-		}
-	}
-	if(TousSupp){
-		for(int i =0; i < 26 ; i++){
-			if (i != Index) TableauStat[i] -= 0.04;
-		}
-	}
-	else if(!TousSupp){
-		std::vector<int> indexTab;
-		int NbValueTab = 0;
-		for(int i =0; i < 26 ; i++){
-			if (TableauStat[i] < 0.05){
-				indexTab.push_back(i);
-				NbValueTab++;
-            }
-		}
-		for(int i =0; i < 26; i++){
 
-			for (int val : indexTab){
-				if(val == i){
-					continue;
-				}
-			if(NbValueTab != 0) {TableauStat[i] -= 0.04/(float)NbValueTab;}
-			}
-
-
-		}
-	}
-	TableauStat[Index] += 1.0;
+   float Tot = 0;
+   TableauStat[Index] += 1.0;
+   for (int i = 0; i < 26; i++) {
+      Tot += TableauStat[i];
+   }
+   ProbaSRand = Tot;
 
 }
 
 void Randomized::Reussite(int Index){
-	if(TableauStat[Index] < 0.3){
-		for(int i = 0; i<26 ; i++){
-			if(i == Index) TableauStat[Index] -= 0.25;
-			else TableauStat[i] += 0.01;
-		}
+
+	float Tot = 0;
+	if(TableauStat[Index] > 0.4) TableauStat[Index] -= 0.3;
+	for (int i = 0; i < 26; i++) {
+	  Tot += TableauStat[i];
 	}
+	ProbaSRand = Tot;
 }
 
 int Randomized::Tirage(float PlageProbaTire){
@@ -77,15 +51,19 @@ void Randomized::LogProba(){
 	std::ofstream Log("data/log/Log.txt", std::ios_base::app);
 	Log << "\n";
 	Tot = 0;
-
-
-
-
 	for (int i = 0; i < 26; i++) {
 		Tot += TableauStat[i];
 		Log << TableauStat[i];
 		Log << " ";
 
 	}
-    Log << "Voici Tot : " << Tot;
+	Log << "Voici Tot : " << Tot;
+	Log.close();
+}
+
+
+void Randomized::ResetProb(){
+	for (int i = 0; i < 26; ++i) {
+		TableauStat[i] = 1.0;
+	}
 }

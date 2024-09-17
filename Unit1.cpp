@@ -53,7 +53,8 @@ void __fastcall TForm1::Button2Click(TObject *Sender)
 
 void __fastcall TForm1::ButtonEnvoyerClick(TObject *Sender)
 {
-	bool verif = myLettre.Verifier(UpperCase(String(AnsiString((Edit1->Text).c_str()))));
+	bool verif;
+	verif = myLettre.Verifier(UpperCase(String(AnsiString((Edit1->Text).c_str()))));
 	if (verif == true) {
 
 		ValiderImg->Visible = true;

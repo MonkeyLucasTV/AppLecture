@@ -6,6 +6,7 @@
 #include <Vcl.ExtCtrls.hpp>
 #include <Vcl.Imaging.pngimage.hpp>
 #include <Vcl.StdCtrls.hpp>
+#include <Vcl.ComCtrls.hpp>
 
 
 #ifndef Unit1H
@@ -36,6 +37,7 @@ __published:	// Composants gérés par l'EDI
 	TTimer *Timer2;
 	TLabel *Label3;
 	TLabel *Label4;
+	TRichEdit *RichEdit1;
 	void __fastcall Button1Click(TObject *Sender);
 	void __fastcall Button2Click(TObject *Sender);
 	void __fastcall ButtonEnvoyerClick(TObject *Sender);

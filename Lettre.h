@@ -19,6 +19,7 @@ class Lettre{
 
 
 
+
 	public:
 		Lettre();
 		void Random();

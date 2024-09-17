@@ -14,6 +14,7 @@ class Randomized{
 		float TableauStat[26];
 		float Tot;
 		float Tire;
+		float ProbaSRand;
 
 	public:
 		Randomized();
@@ -21,8 +22,10 @@ class Randomized{
 		void Reussite(int Index);
 		void LogProba();
 		int Tirage(float PlageProbaTire);
-
+		void ResetProb();
 		inline float Tableau(int i) {return TableauStat[i];};
+		inline float ProbaRand(){ return ProbaSRand;};
+
 
 
 
