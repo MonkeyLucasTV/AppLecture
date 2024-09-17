@@ -44,7 +44,6 @@ void __fastcall TForm1::Button2Click(TObject *Sender)
 	Image1->Visible = true;
 	Button2->Visible = false;
 	Image1->Visible = true;
-	ButtonEnvoyer->Enabled = true;
 	myLettre.Random();
 
 
@@ -54,28 +53,39 @@ void __fastcall TForm1::Button2Click(TObject *Sender)
 
 void __fastcall TForm1::ButtonEnvoyerClick(TObject *Sender)
 {
-	bool verif = false;
+	RichEdit1->Lines->Clear();
+	bool verif;
 	verif = myLettre.Verifier(UpperCase(String(AnsiString((Edit1->Text).c_str()))));
-
+	RichEdit1->Lines->Add("Methode verifié");
 	if (verif == true) {
 
 		ValiderImg->Visible = true;
 		Image1->Visible = false;
         Timer1->Enabled = true;
+
+
+
 		score++;
 		scorelabel->Caption = score;
 		myLettre.Random();
-	}
-	else if (verif == false) {
+		RichEdit1->Lines->Add("Methode random");
+
+	}else if (verif == false) {
+
 
 		Label3->Visible = true;
 		myLettre.Erreur(Label3);
+
+
 		CroixImg->Visible = true;
 		Image1->Visible = false;
 		Timer2->Enabled = true;
+
+
 		scorelabel->Caption = score;
 		myLettre.Random();
 	}
+
 	totalScore++;
     Label4->Caption = "/" + String(totalScore);
 	Edit1->Text = "";

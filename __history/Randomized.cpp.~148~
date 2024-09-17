@@ -48,17 +48,17 @@ int Randomized::Tirage(float PlageProbaTire){
 }
 
 void Randomized::LogProba(){
-//	std::ofstream Log("data/log/Log.txt", std::ios_base::app);
-//	Log << "\n";
-//	Tot = 0;
-//	for (int i = 0; i < 26; i++) {
-//		Tot += TableauStat[i];
-//		Log << TableauStat[i];
-//		Log << " ";
-//
-//	}
-//	Log << "Voici Tot : " << Tot;
-//	Log.close();
+	std::ofstream Log("data/log/Log.txt", std::ios_base::app);
+	Log << "\n";
+	Tot = 0;
+	for (int i = 0; i < 26; i++) {
+		Tot += TableauStat[i];
+		Log << TableauStat[i];
+		Log << " ";
+
+	}
+	Log << "Voici Tot : " << Tot;
+	Log.close();
 }
 
 
